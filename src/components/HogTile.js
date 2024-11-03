@@ -9,7 +9,7 @@ const HogTile = ({ hog, hideHog }) => {
   };
 
   return (
-    <Card className="ui eight wide column" onClick={toggleDetails}>
+    <Card className="card" onClick={toggleDetails}>
       <img src={hog.image} alt={hog.name} />
       <Card.Content>
         <Card.Header>{hog.name}</Card.Header>
