@@ -5,7 +5,6 @@ import HogTile from "./HogTile";
 import FilterSort from "./FilterSort";
 import AddHogForm from "./AddHogForm";
 
-
 function App() {
   const [hogsData, setHogsData] = useState(hogs);
   const [filterGreased, setFilterGreased] = useState(false);
@@ -42,9 +41,9 @@ function App() {
         setSortOption={setSortOption}
       />
       <AddHogForm onAddHog={handleAddHog} />
-      <div className="ui grid container">
-        {filteredHogs.map((hog, index) => (
-          <HogTile key={index} hog={hog} onHide={handleHideHog} />
+      <div className="ui twenty grid container">
+        {filteredHogs.map((hog) => (
+          <HogTile key={hog.name} hog={hog} onHide={handleHideHog} />
         ))}
       </div>
     </div>
